@@ -1,83 +1,453 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="enderbrine" />
-  <meta property="og:description" content="enderbrine in sorosh!">
-  <meta property="og:image" content="https://cdn.imgurl.ir/uploads/s30891_InShot__.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://splus.ir/endertahlil" />
-  <meta property="og:site_name" content="enderbrine" />
-  <meta name="google-site-verification" content="tHNsZKHxuVX2Gd6WAdojOB3fH6S_nKB8mTm25ktZFLQ" />
-  <title>web ender🎀</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>server government</title>
+  
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Vazirmatn', sans-serif;
-      background: linear-gradient(to left, #141414, #170000 );
+      font-family: Tahoma, sans-serif;
+      background-color: #222222;
+      color: #eee;
+        text-align: center;
+    }
+      
+         :root {
+      --main-color: #7209b7;
+      --dark-bg: #1a1a1a;
+      --light-bg: #f2f2f2;
+      --text-dark: #222;
+      --text-light: #eee;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(-45deg, #1a1a1a, #2c003e, #000000, #3d0066);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: var(--text-light);
+      transition: background 0.5s, color 0.5s;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    @keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+      p{
+          font-size: 20px;
+          transition: 0.6s ease;
+      }
+      p:hover{
+          font-size: 30px;
+      }
+      img{
+        width: 63px;
+         
+      }
+      
+      b {
+          color: aliceblue;
+          font-size: 25px;
+          
+              
+          
+      }
+      
+      b:hover{
+          text-shadow: -4px 3px 0px #7209b7;
+          
+      }
+      .d {
+          color: #ffffff;
+          transition: font-size 0.5s ease
+      }
+      .d:hover{
+          font-size: 37px;
+          text-shadow: 0 0 14px #7209b7
+      }
+      
+ p {text-align: center;
+ align-items: center;
+      justify-content: center;}
+      
+   .menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0,0,0,0.6);
+  padding: 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+   .menu-btn {
+      font-size: 28px;
+      background: none;
+      border: none;
       color: white;
-      text-align: center;
+      cursor: pointer;
+      display: none;
     }
-    header {
-      padding: 40px 20px 20px;
+
+    nav {
+      display: flex;
+      gap: 20px;
     }
-    header img {
-      width: 200px;
-      border-radius: 35px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
-    h1 {
-      margin-top: 20px;
-      font-size: 1.5em;
-      text-shadow: 0px 0px 10px green;
-    }
-    h6 {
-      font-size: 1.2em;
-      color: red;
-      text-shadow: 0px 2px 3px red;
-    }
-    p {
-      font-size: 1.5em;
-      margin-bottom: 30px;
-      text-shadow: 0px 0px 6px yellow;
-    }
-    .button {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      background: #000000;
-      background: linear-gradient(to right, #FF0F0F, #FF4D4D, #FF0F0F);
-      color: white;
+
+    nav a {
+      color: #eee;
       text-decoration: none;
-      border-radius: 10px;
+      font-size: 16px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      right: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--main-color);
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+      left: 0;
+      right: auto;
+    }
+
+    .theme-toggle {
+      margin: 20px;
+      text-align: left;
+    }
+
+    .theme-toggle label {
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .title {
+      font-size: 30px;
+      margin-top: 30px;
+      text-shadow: 0 0 14px var(--main-color);
+    }
+
+    .description {
+      font-size: 18px;
+      margin: 10px 0 30px;
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: 1px solid var(--main-color);
+      color: var(--main-color);
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .copy-btn:hover {
+      background: var(--main-color);
+      color: white;
+    }
+
+   header {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(114, 9, 183, 0.4);
+    }
+        .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid var(--main-color);
+      box-shadow: 0 0 10px var(--main-color);
+    }
+
+    .logo span {
+      font-size: 22px;
       font-weight: bold;
-      transition: transform 0.2s;
+      color: #fff;
+      text-shadow: 0 0 5px var(--main-color);
     }
-    .button:hover {
-      transform: scale(1.10);
+
+      
+
+
+
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
     }
+        @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+ .box {
+  width: 200px;
+  height: 230px;
+  background-color: #7209b7;
+  border-radius: 10px;
+  box-shadow: 0 11px 22px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s ease;
+     padding: 1px;
+  border: 4px solid rgb(18, 17, 17); 
+}
+
+.box:hover {
+  background-color: #560bad;
+  transform: translateY(-10px);
+  box-shadow: 0 21px 31px rgba(114, 9, 183, 0.6); /* سایه بنفش */   
+   border: 4px solid rgb(0, 0, 0); 
+}
+      
+ .boxy {
+  width: 262px;
+  height: 85px;
+  background-color: #7209b7;
+  border-radius: 10px;
+  box-shadow: 0 11px 22px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 31px;
+  font-weight: bold;
+  transition: 0.5s ease;
+  padding: 0px;
+  border: 4px solid rgb(18, 17, 17);
+  text-align: center;
+  margin-left: auto; 
+  margin-bottom:  20px
+}
+
+.boxy:hover {
+  background-color: #560bad;
+  transform: translatex(-21px);
+  box-shadow: 0 1px 31px rgba(114, 9, 183, 0.6);  
+   border: 4px solid rgb(0, 0, 0);  
+}    
+      
+        .radio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    direction: rtl;
+    font-family: 'Vazir', sans-serif;
+  }
+
+  .radio-container label {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    cursor: pointer;
+    color: #f6f1f9;
+  }
+
+  .radio-container input[type="radio"] {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    margin-left: 10px;
+    position: relative;
+    transition: border-color 0.3s ease;
+  }
+
+  .radio-container input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #7209b7;
+    border-radius: 50%;
+  }
+
+  .radio-container input[type="radio"]:hover {
+    border-color: #000000;
+  }
+
+body.white-theme {
+  background-color: #f2f2f2;
+  color: #222; /* متن اصلی سایت */
+
+  /* همچنین می‌تونی فونت رو هم عوض کنی اگر بخوای */
+}
+      
+      .white-theme b{
+          text-shadow: 0 0 0px blue
+      }
+
+.white-theme b,
+.white-theme h1,
+.white-theme h3,
+.white-theme p {
+  color: #222; /* متن‌های تیره برای تم سفید */
+}
+      .white-theme header h1 {
+          color: blueviolet;
+      }
+
+.white-theme .d:hover {
+  text-shadow: 0 0 14px #999;
+}
+
+.white-theme .radio-container label {
+  color: #222;
+}
+
+.white-theme .box:hover,
+.white-theme .boxy:hover {
+  background-color: #eee;
+  box-shadow: 0 0 10px #aaa;
+}
+
+
   </style>
 </head>
 <body>
-  <header>
-        <img src="https://cdn.imgurl.ir/uploads/j134914_InShot__.jpg" > 
 
-    <h1>enderbrine</h1>
-        <p><b><u>وبگاه رسمی اندربراین در سروش</u></b></p>
-        <h6>پلیر ماینکرفت و برنامه نویس زبان های کاتلین و اچ تی ام ال و مالک حکومت ماینکرافت</h6> 
-    <a href="https://splus.ir/endertahlil" class="button" target="_blank"> <b><u> کانال رسمی بنده </u></b></a>
-   
-   
-    <img src="https://cdn.imgurl.ir/uploads/s94651_InShot__.png" />
+  <header>
+    <div class="logo">
+      <img src="https://s6.uupload.ir/files/avatar-1009848210_(3)_5v4e.jpg" alt="لوگو" />
+      <span>حکومت ماینکرافت</span>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    
+    <nav id="navMenu">
+      <a href="#">خانه</a>
+      <a href="#">درباره ما</a>
+      <a href="#">تماس</a>
+      <a href="https://splus/hokomatmine" target="_blank">کانال</a>
+    </nav>
+  </header>
+
+  <br>
   
+<div class="radio-container" style="margin-right: 30px;">
+  <label style="display: flex; flex-direction: row-reverse; align-items: center;">
+    <input type="radio" name="option" value="1"> تم دارک
+  </label>
+  <label style="display: flex; flex-direction: row-reverse; align-items: center;">
+    <input type="radio" name="option" value="2"> تم سفید
+  </label>
+</div>
+
+  <h1 class="d">سرور حکومت ماینکرافت</h1>
+  <br>
+<b>سرور حکومت ماینکرافت جزو برترین سرور های کامیونیتی ماینکرافت سروش پلاس و ایران </b> 
+<br> <br>
+<br>
+<button id="copyBtn"  style="background-color: rgba(241, 249, 255, 0); border-radius: 6px; font-size: 21px; text-align: center; color: #d000fb; height: 37px; ">IP = play.governmentmine.ir</button>
+<br>
+  <i>(کلیک کن کپی شه)</i>
+
+  <div class="box-container">
+    <div class="box">همیشه فعال و 24 ساعته در دسترس</div>
+      <div class="box">دارای پشتیبانی اگاه و هوشیار</div>
+   
+    <div class="box">
+       <h3>مطمئن و با امنیت بسیار بالا</h3>
+       
+    </div>
+    <div class="box">هم برای بدراک هم برای جاوا</div>
+    <div class="box">گیم مود های گوناگون و جدید جذاب</div>
+  </div>
+<h3 style="text-align: right; font-size: 30px" >:گیم مود ها</h3>
+<div class="boxy">
+        bedwars  |  بدوارز
+</div>
+<div class="boxy">
+    skywars  |  اسکای وارز
+</div>
+<div class="boxy">
+    سروایل
+</div>
+
+<audio id="clickSound" src="click.mp3" preload="auto"></audio>
+<script>
+  const sound = document.getElementById("clickSound");
+  document.querySelectorAll("button, a").forEach(el => {
+    el.addEventListener("click", () => sound.play());
+  });
+  const radios = document.querySelectorAll('input[name="option"]');
+  radios.forEach(radio => {
+    radio.addEventListener("change", function () {
+      if (this.value === "2") {
+        document.body.classList.add("white-theme");
+      } else {
+        document.body.classList.remove("white-theme");
+      }
+    });
+  });
+     document.getElementById("copyBtn").addEventListener("click", function () {
+    navigator.clipboard.writeText("play.governmentmine.ir").then(function () {
+      alert("✅ IP با موفقیت کپی شد!");
+    }).catch(function (err) {
+      alert("⛔ خطا در کپی: " + err);
+    });
+  });
+     function toggleMenu() {
+      const nav = document.getElementById("navMenu");
+      nav.classList.toggle("show");
+    }
+</script>
+   <br>
+   
+    <b>by enderbrine (: </b>
   
-    <h6> آیدی بنده در سروش جهت پیام : @enderbrine</h6>
-    نسخه ۲ آلفا
-    </header>
 </body>
-</html> 
+</html>
