@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>هدر سایت</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --main-color: #7209b7;
+    }
+
+    body {
+      margin: 0;
+      font-family: Tahoma, sans-serif;
+      background-color: #1a1a1a;
+      color: #eee;
+    }
+
+   header {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(114, 9, 183, 0.4);
+  transition: box-shadow 0.3s ease, border  0.3s ease;
+  border: 2px solid transparent; /* حالت پیش‌فرض بدون حاشیه */
+}
+
+header:hover {
+  border-block-end: 2px solid #7209b7; 
+  box-shadow: 0 0 20px #7209b7;
+}
+ 
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid var(--main-color);
+      box-shadow: 0 0 10px var(--main-color);
+      transition: 0.8s ease;
+    }
+    
+    .logo img:hover{
+      width: 60px;
+      height: 60px;
+    }
+    
+
+    .logo span {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 0 36px var(--main-color);
+    }
+
+    .menu-btn {
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-size: 16px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      right: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--main-color);
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+      left: 0;
+      right: auto;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 70px;
+        right: 415px;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+        transition: 0.5s ease;
+      }
+      .menu-btn:hover{
+        background-color: #7209b7;
+        border-radius: 10px;
+      }
+    }
+    
+    .e{
+      text-align: right;
+    }
+
+      h1{
+     text-align: center;
+      color: #d0aaff;
+      margin-top: 315px;
+      text-shadow: 0 0 10px var(--main-color);
+          transition: 0.5s ease;
+      }
+      
+
+  
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://cdn.imgurl.ir/uploads/d54135_avatar-1009848210_3.jpg" alt="لوگو" />
+      <span>حکومت ماینکرافت</span>
+    </div>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav id="navMenu">
+      <a href="#">خانه</a>
+      <a href="#">درباره ما</a>
+      <a href="https://splus.ir/hokomatmine" target="_blank">کانال</a>
+      <a href="mailto:eeee@gmail.com" target="_blank">پشتیبانی</a>
+    </nav>
+  </header>
+  <br>
+  <h3 style="margin-right: 10px">بنام حق</h3>
+  <h4 style="margin-right: 10px">منظور از ساخت این سایت برای رفاه جامعه ماینکرافت پلیر ایران است </h4>
+  <h4 style="margin-right: 10px">تا بتوانند به راحتی از مود ها و شیدر ها و تکسچر ها استفاده کنند</h4>
+  <h4 style="margin-right: 10px">علاوه بر آن میتوانید تمامی نسخه ها و جدیدترین نسخه رو از این سایت دریافت کنید</h4>
+  <h4 style="margin-right: 10px">و بزودی بخش معرفی تمامی سرور های ایرانی و حتی سرور شما به صورت رایگان انتشار میشود تا سرور شما به بقیه پلیر ها هم معرفی میشوند</h4>
+  <h4 style="margin-right: 10px">و یکی از مزایای سایت حکومت ماینکرافت این است که شما میتونید مود یا تکسچر خود را توسط سایت ما به انتشار بزارید تا بقیه هم از تلاش شما استفاده کنند</h4>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navMenu");
+      nav.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
