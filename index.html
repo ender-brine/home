@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>حکومت ماینکرافت</title>
+  <title>صفحه اصلی</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
@@ -16,26 +16,26 @@
       color: #eee;
     }
 
-   header {
-  position: sticky;
-  top: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  box-shadow: 0 4px 20px rgba(114, 9, 183, 0.4);
-  transition: box-shadow 0.3s ease, border  0.3s ease;
-  border: 2px solid transparent; /* حالت پیش‌فرض بدون حاشیه */
-}
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(114, 9, 183, 0.4);
+      transition: box-shadow 0.3s ease, border 0.3s ease;
+      border: 2px solid transparent;
+    }
 
-header:hover {
-  border-block-end: 2px solid #7209b7; 
-  box-shadow: 0 0 20px #7209b7;
-}
- 
+    header:hover {
+      border-block-end: 2px solid #7209b7;
+      box-shadow: 0 0 20px #7209b7;
+    }
+
     .logo {
       display: flex;
       align-items: center;
@@ -50,12 +50,6 @@ header:hover {
       box-shadow: 0 0 10px var(--main-color);
       transition: 0.8s ease;
     }
-    
-    .logo img:hover{
-      width: 60px;
-      height: 60px;
-    }
-    
 
     .logo span {
       font-size: 22px;
@@ -70,7 +64,39 @@ header:hover {
       border: none;
       color: white;
       cursor: pointer;
-      display: none;
+      display: none; 
+      position: relative;
+      padding: 10px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .menu-btn:hover, .menu-btn.open {
+      color: #7209b7;
+    }
+
+    .menu-btn:hover .bar {
+      background-color: #7209b7;
+    }
+
+    .menu-btn .bar {
+      display: block;
+      width: 30px;
+      height: 4px;
+      background: white;
+      margin: 6px 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-btn.open .bar1 {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    .menu-btn.open .bar2 {
+      opacity: 0;
+    }
+
+    .menu-btn.open .bar3 {
+      transform: translateY(-10px) rotate(-45deg);
     }
 
     nav {
@@ -93,7 +119,7 @@ header:hover {
       width: 0%;
       height: 2px;
       background-color: var(--main-color);
-      transition: 0.3s;
+      transition: 0.7s;
     }
 
     nav a:hover::after {
@@ -103,45 +129,30 @@ header:hover {
     }
 
     @media (max-width: 768px) {
+      .menu-btn {
+        display: block; 
+      }
+
       nav {
         display: none;
         flex-direction: column;
         background: #111;
         position: absolute;
-        top: 70px;
-        right: 415px;
+        top: 100px;
+        right: 10px;
         padding: 20px;
         border-radius: 8px;
+        gap: 10px;
       }
 
       nav.show {
         display: flex;
       }
-
-      .menu-btn {
-        display: block;
-        transition: 0.5s ease;
-      }
-      .menu-btn:hover{
-        background-color: #7209b7;
-        border-radius: 10px;
-      }
     }
-    
-    .e{
+
+    .e {
       text-align: right;
     }
-
-      h1{
-     text-align: center;
-      color: #d0aaff;
-      margin-top: 315px;
-      text-shadow: 0 0 10px var(--main-color);
-          transition: 0.5s ease;
-      }
-      
-
-  
   </style>
 </head>
 <body>
@@ -151,29 +162,38 @@ header:hover {
       <img src="https://cdn.imgurl.ir/uploads/d54135_avatar-1009848210_3.jpg" alt="لوگو" />
       <span>حکومت ماینکرافت</span>
     </div>
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <button class="menu-btn" onclick="toggleMenu()">
+      <span class="bar bar1"></span>
+      <span class="bar bar2"></span>
+      <span class="bar bar3"></span>
+    </button>
     <nav id="navMenu">
-      <a href="#">خانه</a>
-      <a title="بزودی" href="#">درباره ما</a>
+      <a href="https://ender-brine.github.io/home" target="_blank">خانه</a>
+      <a href="https://ender-brine.github.io/about" target="_blank">درباره ما</a>
       <a href="https://splus.ir/hokomatmine" target="_blank">کانال</a>
-      <a href="mailto:" target="_blank">پشتیبانی</a>
+      <a href="https://splus.ir/enderbrine" target="_blank">پشتیبانی</a>
     </nav>
   </header>
-  <br>
-  <h3 style="margin-right: 10px">بنام حق</h3>
-  <h4 style="margin-right: 10px">منظور از ساخت این سایت برای رفاه جامعه ماینکرافت پلیر ایران است </h4>
-  <h4 style="margin-right: 10px">تا بتوانند به راحتی از مود ها و شیدر ها و تکسچر ها استفاده کنند</h4>
-  <h4 style="margin-right: 10px">علاوه بر آن میتوانید تمامی نسخه ها و جدیدترین نسخه رو از این سایت دریافت کنید</h4>
-  <h4 style="margin-right: 10px">و بزودی بخش معرفی تمامی سرور های ایرانی و حتی سرور شما به صورت رایگان انتشار میشود تا سرور شما به بقیه پلیر ها هم معرفی میشوند</h4>
-  <h4 style="margin-right: 10px">و یکی از مزایای سایت حکومت ماینکرافت این است که شما میتونید مود یا تکسچر خود را توسط سایت ما به انتشار بزارید تا بقیه هم از تلاش شما استفاده کنند</h4>
-  <br>
-  <h2 style="margin-right: 10px">و سایت بزودی در دسترس قرار میگیرد</h2>
+  <br> <br> <br> <br> <br> <br><br> <br> <br><br> <br> <br><br> <br> <br>
+<h1 style="text-align: center; color: #c37bf3; text-shadow: 0 0 24px #7209b7">در حال طراحی</h1>
   <script>
     function toggleMenu() {
       const nav = document.getElementById("navMenu");
+      const menuButton = document.querySelector(".menu-btn");
       nav.classList.toggle("show");
+      menuButton.classList.toggle("open");
     }
+
+    document.addEventListener('click', function(event) {
+      const navMenu = document.getElementById('navMenu');
+      const menuButton = document.querySelector('.menu-btn');
+      if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) {
+        navMenu.classList.remove('show');
+        menuButton.classList.remove('open');
+      }
+    });
   </script>
 
 </body>
 </html>
+
